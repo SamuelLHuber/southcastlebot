@@ -39,8 +39,7 @@ const publishCast = async (msg: string) => {
 const MESSAGE = "Summoning team SOUTH to !attack north in /farcastles"
 
 const job = cron.schedule(
-  // `0 */12 * * *`, // Cron time format
-  `*/5 * * * *`, // Cron time format
+  `0 */12 * * *`, // Cron time format
   function () {
     publishCast(MESSAGE); // Function to execute at the scheduled time.
   },
